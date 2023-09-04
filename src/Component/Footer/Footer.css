@@ -1,0 +1,40 @@
+.footer{
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    padding-left: 10px;
+    /* height: 80px; */
+    color: white;
+    padding-left: 20px;
+    font-size: 0.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:initial;
+    width:auto;
+    background-color: rgb(0, 0, 0);
+    height:15%;
+    /* margin-right: 50px; */
+}
+
+
+.logo >  img{
+    
+    height: 60px;
+    cursor: pointer;
+  
+}
+.logo  {
+    padding: 0 0px 0 0;
+    align-items: flex-start;
+}
+.footImg > img{
+    height: 30px;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+
+}
+.footImg{
+    padding: 0px 50px 0px 500px;
+    text-align: justify;
+    align-items: flex-end;
+    
+}

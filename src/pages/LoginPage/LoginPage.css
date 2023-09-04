@@ -1,0 +1,96 @@
+
+.content{
+    position: absolute;
+    display: inline;
+    flex-direction: column;
+}
+
+
+.bodyLog{
+    display: flex;
+    
+    width: 40%;
+    height: 100vh;
+    margin-left: 30%;
+    color: white;
+    /* padding:0 100px 0 100px; */
+    /* margin:0 400px 0 400px ; */
+    background-color: rgba(0, 0, 0, 0.651);
+    grid-template-columns:max-content;
+    justify-content: space-around;
+    align-items: center;
+}
+.loginInput{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white    ;
+
+    
+}
+.input{
+    background-color: rgba(255, 255, 255, 0.699);
+    height: 5vh;
+    width: 25vw;
+    color: rgb(0, 0, 0)    ;
+    border: none;
+   
+}
+.help{
+    font-size: 0.8vw;
+    font-family: sans-serif, Arial, Helvetica;
+    text-align: right;
+    padding-left:   250px;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       
+    border:none;
+    cursor: pointer;
+    color:black;
+    font-size: 1.05rem;
+    margin-right: 200px;
+    
+}
+
+.button:hover{
+    background-color: yellow;
+    transition: ease-in-out ;
+
+}
+
+.info{
+ display: flex;
+ flex-direction: row;
+ inline-size: none;
+ font-size: 0.8vw;
+}
+.buttonText{
+    font-size: 1.05rem;
+    color: lightblue;
+    /* font-family: sans-serif, Arial, Helvetica; */
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.buttonHelp{
+    font-size: 0.8vw;
+    /* font-family: sans-serif, Arial, Helvetica; */
+    text-align: right;
+    padding-left:   250px;
+    color:lightblue;
+}

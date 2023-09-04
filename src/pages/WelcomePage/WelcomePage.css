@@ -1,0 +1,98 @@
+
+.content{
+    /* color: white; */
+    position:absolute;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.404);
+    height:125%;
+    width: 100%; 
+    grid-template-columns:200vh 850vh;
+}
+
+.header{
+    background-color: rgba(0, 0, 0, 0.404);
+    height:15%;
+    
+}
+
+.body{
+    margin-top: 10rem;
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+}
+.text{
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      text-align: center;
+      
+      font-size: 1.5rem;
+      color: white;
+      margin-top: -20rem;
+}
+/* .h1{
+      
+} */
+.form{
+      display:grid;
+      width: 60%;
+      align-items: center;}
+.button{
+        /* padding: 0.5rem 1rem; */
+        margin-left: 40%;
+        background-color: gold;
+        border: none;
+        color: black;
+        font-size: 1.05rem;
+        width: 10rem;
+        
+ }
+ .multi {
+      /* position: absolute; */
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(20, 20, 20);
+      color: white;
+      height: 200px;
+      padding: 100px;
+      border-color: gold;
+      border-width: 1rem;
+  }
+  .imgPad{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .recommend{
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(20, 20, 20);
+      color: white;
+      height: 200px;
+      padding: 100px;
+      margin-right: auto;
+  }
+
+  .recImg{
+    padding-right: 300px;
+  }
+  .social{
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(20, 20, 20);
+      color: white;
+      height: 200px;
+      padding: 100px;
+  }
+  .socialImg{
+    padding-left: 200px;
+  }
+
+  .footer{
+    /* background-color: rgb(20, 20, 20); */
+    height:15%;
+    width: 100%; 
+}

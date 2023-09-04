@@ -1,0 +1,62 @@
+.contentSignUp{
+    position: absolute;
+    display: inline;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.418);
+    height:125%;
+    width: 100%; 
+    grid-template-columns:200vh 850vh;
+    justify-content: space-around;
+}
+.bodySign{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+    margin-left: 30%;
+    color: white;
+    /* padding:0 100px 0 100px; */
+    /* margin:0 400px 0 400px ; */
+    background-color: rgba(0, 0, 0, 0.651);
+    grid-template-columns:max-content;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input{
+    background-color: rgba(255, 255, 255, 0.699);
+    height: 5vh;
+    width: 25vw;
+    color: rgb(0, 0, 0)    ;
+    border: none;
+   
+   
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white    ;
+    margin-left: -30%;
+}
+.footer{
+    display: flex;
+    height:25%;
+    width: 100%; 
+}
+.signInput{
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    align-items: center;
+    /* justify-content: top; */
+    padding-top: -10rem;
+    gap: 1.05rem;
+    color: white    ;
+
+    
+}

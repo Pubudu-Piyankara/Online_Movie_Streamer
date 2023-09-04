@@ -1,0 +1,26 @@
+.contentEager{
+    position: absolute;
+    flex-direction: column;
+    display: inline;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.418);
+    height:125%;
+    width: 100%; 
+    grid-template-columns:200vh 850vh;
+    justify-content: space-around;
+}
+.contentEager h1{
+    font-size: 5vh;
+    color: white;
+    margin-left: 5vh;
+    margin-top: 5vh;
+}
+.headerEager{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
