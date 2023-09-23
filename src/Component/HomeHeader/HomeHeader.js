@@ -3,20 +3,20 @@ import logo from '../../Images/logo.png'
 import './HomeHeader.css'
 //import account from '../../Images/account.png'
 //import user from '../../Images/user.png'
-import {AiOutlineLogout} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+// import {AiOutlineLogout} from 'react-icons/ai'
+// import { Link } from 'react-router-dom'
 
 const HomeHeader = () => {
   // const [isOpen, setIsOpen] = useState(false);
 
-  const navLink = [
-    {name: 'Home', link: '/'},
-    {name: 'Movies', link: '/movies'},
-    {name: 'TV Shows', link: '/tvshows'},
-    {name: 'Genres', link: '/genres'},
-    {name: 'Latest', link: '/latest'},
-    {name: 'About', link: '/about'},
-  ];
+  // const navLink = [
+  //   {name: 'Home', link: '/'},
+  //   {name: 'Movies', link: '/movies'},
+  //   {name: 'TV Shows', link: '/TVShows'},
+  //   {name: 'Genres', link: '/genres'},
+  //   {name: 'Latest', link: '/latest'},
+  //   {name: 'About', link: '/about'},
+  // ];
   return (
     <div className='homeHeader'>
         <div className='logo'>
@@ -34,13 +34,13 @@ const HomeHeader = () => {
 
         </div> */}
 
-        <ul className='navLink'>
+        {/* <ul className='navLink'>
           {navLink.map((item, index) => ( 
             <li key={index}>
               <Link to={item.link}>{item.name}</Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
 
         <div className='search'>
             <input className='input'
