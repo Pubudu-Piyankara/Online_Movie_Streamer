@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../Images/logo.png'
 import './HomeHeader.css'
+import NavigationBar from '../../Component/NavigationBar/NavigationBar'
 //import account from '../../Images/account.png'
 //import user from '../../Images/user.png'
 // import {AiOutlineLogout} from 'react-icons/ai'
@@ -24,6 +25,7 @@ const HomeHeader = () => {
             alt ='logo'/>
 
         </div>
+        <NavigationBar className='navEager' />
         {/* <div >
             <button className='buttonText'>Home</button>
             <button className='buttonText'>Movies</button>
