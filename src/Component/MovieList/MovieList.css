@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 }
 .movieCard{
     display: flex;
@@ -17,7 +18,7 @@
     width: 200px;
     height: 400px;
     margin: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 0 rgba(223, 173, 75, 0.2);
     border-radius: 5px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
