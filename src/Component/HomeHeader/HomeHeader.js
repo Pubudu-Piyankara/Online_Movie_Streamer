@@ -44,12 +44,12 @@ const HomeHeader = () => {
           ))}
         </ul> */}
 
-        <div className='search'>
+        {/* <div className='search'>
             <input className='input'
                 type='text'
                 placeholder='Search' />
-                {/* <button className='buttonText'>Search</button> */}
-        </div>
+                <button className='buttonText'>Search</button>
+        </div> */}
 
     </div>    
 

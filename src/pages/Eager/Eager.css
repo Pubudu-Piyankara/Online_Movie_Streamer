@@ -24,3 +24,15 @@
     margin-left: 5vh;
     margin-right: 5vh;
 }
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+.row{
+    color: black;
+}

@@ -1,52 +1,54 @@
-import React, { useState } from 'react';
-import HomeHeader from '../../Component/HomeHeader/HomeHeader'
-import './Eager.css'
-import axios from 'axios';
-
-
-//import BackgroundImage from '../../Component/BackgroundImage/BackgroundImage'
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeHeader from '../../Component/HomeHeader/HomeHeader';
+import MovieList from '../../Component/MovieList/MovieList';
+import MovieListHeading from '../../Component/other/MovieListHeading'; // Corrected import path
+import './Eager.css';
 
 const Eager = () => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [movies, setMovies] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
 
-  const handleSearch = async () => {
-    try {
-      const response = await axios.get(`/api/movies?query=${searchQuery}`);
-      setMovies(response.data.Search || []);
-    } catch (error) {
-      console.error(error);
+  const getMovieRequest = async (searchValue) => {
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=679cbfc1`;
+
+    const response = await fetch(url);
+    const responseJson = await response.json();
+
+    if (responseJson.Search) {
+      setMovies(responseJson.Search);
     }
   };
+
+  useEffect(() => {
+    getMovieRequest(searchValue);
+  }, [searchValue]);
+
   return (
-    <><div>
-      {/* <BackgroundImage /> */}
+    <div>
       <div className='contentEager'>
         <HomeHeader className='headerEager' />
-
-        <div className='bodyEager'>  </div>
-      </div>
-    </div><div className="App">
-        <h1>Movie Search App</h1>
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search for a movie"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)} />
-          <button onClick={handleSearch}>Search</button>
-        </div>
-        <div className="movie-list">
-          {movies.map((movie) => (
-            <div key={movie.imdbID} className="movie-card">
-              <img src={movie.Poster} alt={movie.Title} />
-              <h2>{movie.Title}</h2>
-              <p>Year: {movie.Year}</p>
+        <div className='bodyEager'>
+          <div className='container-fluid movie-app'>
+            <div className='row d-flex align-items-center mt-4 mb-4'>
+              <MovieListHeading heading='Movies' /> {/* Pass heading as a prop */}
             </div>
-          ))}
+            <div className='row'>
+              
+              <input
+                type='text'
+                className='searchBox'
+                onChange={(e) => setSearchValue(e.target.value)}
+                placeholder='Search...'
+              />
+			  <MovieList movies={movies} />
+              {/* You might want to add a component to handle the search input */}
+            </div>
+          </div>
         </div>
-      </div></>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Eager
+export default Eager;

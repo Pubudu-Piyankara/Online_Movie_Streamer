@@ -1,15 +1,12 @@
 import React from 'react'
 //import styled from 'styled-components'
-import blackbanner from '../../Images/black-banner.jpg';
+import blackener from '../../Images/black-banner.jpg';
 import '../BackgroundImage/BackgroundImage.css'
 const BackgroundImage = () => {
   return (
     
     <div className='backImg'>
-      
-    
-
-      <img src ={blackbanner}
+      <img src ={blackener}
       alt = 'No internet connection' 
       />
 
@@ -17,8 +14,4 @@ const BackgroundImage = () => {
     
   )
 }
-
-
-
-
 export default BackgroundImage
