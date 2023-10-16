@@ -1,0 +1,46 @@
+.tvList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.tvCard{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0 rgba(223, 173, 75, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.tvCard:hover{
+    transform: scale(1.05);
+}
+.tvCard > img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.tvCard > h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.5rem;
+    text-align: center;
+}
+.tvfav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
