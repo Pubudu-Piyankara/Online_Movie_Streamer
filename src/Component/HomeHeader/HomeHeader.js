@@ -8,48 +8,16 @@ import NavigationBar from '../../Component/NavigationBar/NavigationBar'
 // import { Link } from 'react-router-dom'
 
 const HomeHeader = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const navLink = [
-  //   {name: 'Home', link: '/'},
-  //   {name: 'Movies', link: '/movies'},
-  //   {name: 'TV Shows', link: '/TVShows'},
-  //   {name: 'Genres', link: '/genres'},
-  //   {name: 'Latest', link: '/latest'},
-  //   {name: 'About', link: '/about'},
-  // ];
+ 
   return (
     <div className='homeHeader'>
-        <div className='logo'>
-          <img src ={logo} className='eag'
-            alt ='logo'/>
+      <div className='logo'>
+        <img src ={logo} className='eag'
+           alt ='logo'/>
 
-        </div>
-        <NavigationBar className='navEager' />
-        {/* <div >
-            <button className='buttonText'>Home</button>
-            <button className='buttonText'>Movies</button>
-            <button className='buttonText'>TV Shows</button>
-            <button className='buttonText'>Genres</button>
-            <button className='buttonText'>Latest</button>
-            <button className='buttonText'>About</button>     
-
-        </div> */}
-
-        {/* <ul className='navLink'>
-          {navLink.map((item, index) => ( 
-            <li key={index}>
-              <Link to={item.link}>{item.name}</Link>
-            </li>
-          ))}
-        </ul> */}
-
-        {/* <div className='search'>
-            <input className='input'
-                type='text'
-                placeholder='Search' />
-                <button className='buttonText'>Search</button>
-        </div> */}
+      </div>
+      <NavigationBar className='navEager' />
+       
 
     </div>    
 
