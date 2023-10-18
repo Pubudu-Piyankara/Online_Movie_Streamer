@@ -1,7 +1,13 @@
 
 
 {
-    "reactSnippets.settings.prettierEnabled": true
+    "reactSnippets.settings.prettierEnabled": true,
+    "cSpell.words": [
+        "Favourites",
+        "moviefav",
+        "passwaord",
+        "tvfav"
+    ]
     
 }
 

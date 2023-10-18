@@ -9,6 +9,7 @@ import Eager from './pages/Eager/Eager';
 //import BackgroundImage from './Component/BackgroundImage';
 //import Header from './Component/Header';
 import WelcomePage from './pages/WelcomePage/WelcomePage';
+import Trending from './pages/Trendings/Trending';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Route exact path = '/movie' element={<MoviePage/>}/>
       <Route exact path = '/eager' element={<Eager/>}/>
       <Route exact path = '/welcomepage' element={<WelcomePage/>}/>
+      <Route exact path='/trending' element={<Trending/>}/>
          
       
     </Routes>

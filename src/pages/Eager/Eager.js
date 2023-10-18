@@ -7,20 +7,20 @@ import MovieListHeading from '../../Component/other/MovieListHeading';
 import TVList from '../../Component/TVList/TVList';
 // Corrected import path
 import './Eager.css';
+import Search from '../../Component/Search/Search';
 
 
 const Eager = () => {
-  // const [movies, setMovies] = useState([]);
-  // const [searchValue, setSearchValue] = useState('');
+  const [movies, setMovies] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
   const[movieList,setMovieList]=useState([]);
 
 
-  //Movies are fetched from the API(search option)
+  // Movies are fetched from the API(search option)
   // const getMovieRequest = async (searchValue) => {
   //   const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=679cbfc1`;
-  //   // const url = `https://api.themoviedb.org/3/discover/movie?s=${searchValue}&apikey=c1fcc16a1073776c38f907c1106c96eb`;
-  //   // const url = `https://api.themoviedb.org/3/search/movie?api_key=c1fcc16a1073776c38f907c1106c96eb&query=${searchValue}`;
- 
+  //   // const url = `https://api.themoviedb.org/3/search/movie?s=${searchValue}&api_key=c1fcc16a1073776c38f907c1106c96eb`;
+    
   //   const response = await fetch(url);
   //   const responseJson = await response.json();
 
@@ -76,17 +76,18 @@ const Eager = () => {
                {/* Pass heading as a prop */}
             </div>
             <div >
-              
+              <Search searchValue={movies} setSearchValue={setSearchValue} />
               {/* <input
                 type='text'
                 className='searchBox'
                 onChange={(e) => setSearchValue(e.target.value)}
-                placeholder='Search...'/>
-			         <MovieList movies={movies} /> */}
+                placeholder='Search...'/> */}
+			         <MovieList movies={setSearchValue} />
               
               
             </div>
             <div>
+              
               <div>
                 <MovieListHeading heading='Movies' />
               </div>
