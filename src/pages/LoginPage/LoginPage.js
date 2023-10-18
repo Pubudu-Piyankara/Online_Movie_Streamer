@@ -6,6 +6,47 @@ import Footer from '../../Component/Footer/Footer'
 import './LoginPage.css'
 
 const LoginPage = (props) => {
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const { email, password } = event.target;
+
+    // const response = await fetch('http://localhost:5000/login', {
+    // `${process.env.REACT_APP_API_URL}/login`,
+    //   {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       email: email.value,
+    //       password: password.value,
+    //     }),
+    //   }
+    // })
+    // );
+    const response = await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.value,
+          password: password.value,
+        }),
+      }
+    );
+
+    const data = await response.json();
+    console.log(data);
+    if (data.message === "Login successful") {
+      localStorage.setItem("token", data.token);
+      navigate("/eager");
+    }
+  }
+
   const navigate = useNavigate()
   return (
     <div>

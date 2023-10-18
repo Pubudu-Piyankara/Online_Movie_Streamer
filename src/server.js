@@ -30,3 +30,20 @@ app.get('/api/movies', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+const AuthRouter = require('./auth/router');
+// const MovieRouter = require('./movie/router');
+// const TvRouter = require('./tv/router');
+// const GenreRouter = require('./genre/router');
+// const TrendingRouter = require('./trending/router');
+// const AboutRouter = require('./about/router');
+// const SearchRouter = require('./search/router');
+
+app.use('/auth', AuthRouter);
+// app.use('/movie', MovieRouter);
+// app.use('/tv', TvRouter);
+// app.use('/genres', GenreRouter);
+// app.use('/trending', TrendingRouter);
+// app.use('/about', AboutRouter);
+// app.use('/search', SearchRouter);
+// const express = require('express');

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HomeHeader from '../../Component/HomeHeader/HomeHeader';
+import MovieListHeading from '../../Component/other/MovieListHeading';
+import TVList from '../../Component/TVList/TVList';
 
 const TVShow = () => {
 
@@ -23,9 +25,15 @@ const TVShow = () => {
       <div>
         <HomeHeader/>
       </div>
-      {tvList.map((tv)=>(
+      <div className='homeTV'>
+              <div>
+              <MovieListHeading heading='TV Shows' />
+              </div>
+            {/* {tvList.map((tv)=>(
                 <img className='poster' src={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`} alt="tv" />
-                ))}
+                ))} */}
+                <TVList tv={tvList} />
+            </div>
     </div>
   )
 }

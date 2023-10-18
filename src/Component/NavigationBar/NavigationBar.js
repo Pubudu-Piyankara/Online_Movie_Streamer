@@ -1,35 +1,38 @@
-// import React from 'react'
+import React from 'react'
 import './NavigationBar.css'
-import SearchBox from '../other/SearchBox';
-import React, { useState, useEffect } from 'react';
+//import SearchBox from '../other/SearchBox';
+// import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import MovieList from '../../Component/MovieList/MovieList';
+//import MovieList from '../../Component/MovieList/MovieList';
+// import Search from '../Search/Search';
 
 
 const NavigationBar = (props) => {
 
-    const [movies, setMovies] = useState([]);
+    // const [movies, setMovies] = useState([]);
 
- const [searchValue, setSearchValue] = useState('');
- const navigate = useNavigate()
-
- const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=679cbfc1`;
-    // const url = `https://api.themoviedb.org/3/discover/movie?s=${searchValue}&apikey=c1fcc16a1073776c38f907c1106c96eb`;
-    // const url = `https://api.themoviedb.org/3/search/movie?api_key=c1fcc16a1073776c38f907c1106c96eb&query=${searchValue}`;
+//  const [searchValue, setSearchValue] = useState('');
  
-    const response = await fetch(url);
-    const responseJson = await response.json();
 
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
-    }
-  };
+//  const getMovieRequest = async (searchValue) => {
+//     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=679cbfc1`;
+//     // const url = `https://api.themoviedb.org/3/discover/movie?s=${searchValue}&apikey=c1fcc16a1073776c38f907c1106c96eb`;
+//     // const url = `https://api.themoviedb.org/3/search/movie?api_key=c1fcc16a1073776c38f907c1106c96eb&query=${searchValue}`;
+ 
+//     const response = await fetch(url);
+//     const responseJson = await response.json();
 
-  useEffect(() => {
-    getMovieRequest(searchValue);
-  }, [searchValue]);
+//     if (responseJson.Search) {
+//       setMovies(responseJson.Search);
+//     }
+//   };
+
+//   useEffect(() => {
+//     getMovieRequest(searchValue);
+//   }, [searchValue]);
+
+const navigate = useNavigate()
 
   return (
     <div>   
@@ -41,14 +44,14 @@ const NavigationBar = (props) => {
                     <li><a href='/movie'>Movies</a></li>
                     <li><a href='/tv'>TV</a></li>
                     <li><a href='/genres'>Genres</a></li>
-                    <li><a href='/latest'>Latest</a></li>
+                    <li><a href='/trending'>Trending</a></li>
                     <li><a href='/about'>About</a></li>
                 </ul>
             </nav>
             <div className='row'>
               
               {/* <SearchBox/> */}
-              
+              {/* <Search searchResults={movies} /> */}
               
             </div>
             {/* <SearchBox className='searchBox' searchValue={searchValue} setSearchValue={setSearchValue} /> */}
